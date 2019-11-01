@@ -1,0 +1,17 @@
+@AbapCatalog.sqlViewName: 'DEMO_CDS_PARA_SM'
+@AbapCatalog.compiler.compareFilter: true
+@AbapCatalog.preserveKey: true
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'DEMO CDS PARAMETERS'
+
+define view ZL_DEMO_CDS_PARA  // Nombre de CDS
+  as select from spfli  // Se usara la tabla spfli 
+
+{
+  key carrid, // Llave primaria
+  key connid, // Llave primaria
+      cityfrom,
+      cityto,
+      distance,
+      distid
+}
